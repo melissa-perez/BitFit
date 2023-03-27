@@ -10,22 +10,22 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] **At least one health metric is tracked (based on user input)**
+- [*] **At least one health metric is tracked (based on user input)**
   - Chosen metric(s): `Sleep`
-- [ ] **There is a "create entry" UI that prompts users to make their daily entry**
+- [*] **There is a "create entry" UI that prompts users to make their daily entry**
 - [ ] **New entries are saved in a database and then updated in the RecyclerView**
 - [ ] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
  
 The following **optional** features are implemented:
 
-- [ ] **Create a UI for tracking averages and trends in metrics**
-- [ ] **Improve and customize the user interface through styling and coloring**
+- [*] **Create a UI for tracking averages and trends in metrics**
+- [*] **Improve and customize the user interface through styling and coloring**
 - [ ] **Implement orientation responsivity**
 - [ ] **Add a daily photo feature**
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- Not applicable this time :(
 
 ## Video Walkthrough
 
