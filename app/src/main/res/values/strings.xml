@@ -10,4 +10,10 @@
     <string name="notesText">Any other notes?</string>
     <string name="notesHintText">Ex. sleeping pill, noisy</string>
     <string name="saveBtnText">Save</string>
+    <string name="dateText">MAR 27 2023</string>
+    <string name="hoursSleptText">8.5</string>
+    <string name="feelingText">1</string>
+    <string name="feelingPromptText">rated feeling</string>
+    <string name="noteText">took a sleeping pill</string>
+    <string name="hours_slept">hours slept</string>
 </resources>
