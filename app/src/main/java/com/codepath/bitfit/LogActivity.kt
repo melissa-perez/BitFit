@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.codepath.bitfit.databinding.SleepLogActivityBinding
@@ -19,6 +20,7 @@ class LogActivity : AppCompatActivity() {
     private lateinit var dateEditText: EditText
     private lateinit var saveBtn: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = SleepLogActivityBinding.inflate(layoutInflater)
@@ -29,6 +31,7 @@ class LogActivity : AppCompatActivity() {
         dateEditText = findViewById(R.id.date_string)
         notesEditText = findViewById(R.id.notes)
         saveBtn = findViewById(R.id.save_entry_btn)
+
 
         saveBtn.setOnClickListener {
             val hours = sleptHoursSlider.value
@@ -55,7 +58,10 @@ class LogActivity : AppCompatActivity() {
                         )
                     )
                 }
+
             }
+
+
             // reset data
             sleptHoursSlider.value = 0.0f
             feelingRatingSlider.value = 0f
