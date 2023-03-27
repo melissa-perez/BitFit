@@ -36,28 +36,22 @@ class LogActivity : AppCompatActivity() {
             val notes = notesEditText.text.toString()
             val date = dateEditText.text.toString()
 
-            val newSleepEntry = SleepEntry(
-                hours,
-                feelings,
-                date,
-                notes
-            )
 
             Log.d(
                 "LogActivity/",
-                "${newSleepEntry.hours}, ${newSleepEntry.feeling}," +
-                        " ${newSleepEntry.notes} , ${newSleepEntry.logDate}"
+                "${hours}, ${feelings}," +
+                        " ${notes}, ${date}"
             )
 
-            newSleepEntry.let {
+            let {
                 lifecycleScope.launch(IO) {
 
                     (application as SleepEntryApplication).db.sleepEntryDao().insert(
                         SleepEntryEntity(
-                            sleptHours = it.hours,
-                            feelingRating = it.feeling,
-                            sleepNotes = it.notes,
-                            sleepDate = it.logDate
+                            sleptHours = hours,
+                            feelingRating = feelings,
+                            sleepNotes = notes,
+                            sleepDate = date
                         )
                     )
                 }

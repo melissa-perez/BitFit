@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.launch
 
 class SleepEntryFragment : Fragment(), OnListFragmentInteractionListener {
     private lateinit var recyclerView: RecyclerView
@@ -35,17 +37,32 @@ class SleepEntryFragment : Fragment(), OnListFragmentInteractionListener {
         adapter = SleepEntryRecyclerAdapter(entries, this@SleepEntryFragment)
         recyclerView.adapter = adapter
 
-        updateAdapter(recyclerView)
-
+        lifecycleScope.launch {
+            (requireActivity().application as SleepEntryApplication).db.sleepEntryDao()
+                .getAllSleepEntries().collect { databaseList ->
+                databaseList.map { entity ->
+                    SleepEntryEntity(
+                        entity.id,
+                        entity.sleptHours,
+                        entity.feelingRating,
+                        entity.sleepNotes,
+                        entity.sleepDate
+                    )
+                }.also { mappedList ->
+                    val sleepEntries = mappedList.map { sleepEntryEntity ->
+                        SleepEntry(
+                            sleepEntryEntity.sleptHours,
+                            sleepEntryEntity.feelingRating,
+                            sleepEntryEntity.sleepDate,
+                            sleepEntryEntity.sleepNotes
+                        )
+                    }
+                    entries.clear()
+                    entries.addAll(sleepEntries)
+                    adapter.notifyDataSetChanged()
+                }
+            }
+        }
         return view
-    }
-
-    private fun updateAdapter(recyclerView: RecyclerView) {
-
-        //val movieJsonArray: JSONArray? = json?.jsonObject?.getJSONArray("results")
-
-        //movieJsonArray?.let { NowPlayingMovie.fromJsonArray(it) }?.let { movies.addAll(it) }
-        adapter.notifyDataSetChanged()
-
     }
 }
