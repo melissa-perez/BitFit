@@ -5,6 +5,6 @@ import java.util.*
 class SleepEntry(
     val hours: Float,
     val feeling: Int,
-    val logDate: Date,
+    val logDate: String,
     val notes: String
 )

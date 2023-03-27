@@ -7,12 +7,11 @@ import androidx.room.TypeConverters
 import java.util.Date
 
 @Entity(tableName = "sleep_entry_table")
-@TypeConverters(Converters::class)
 
 data class SleepEntryEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "sleptHours") val sleptHours: Float,
     @ColumnInfo(name = "feelingRating") val feelingRating: Int,
     @ColumnInfo(name = "sleepNotes") val sleepNotes: String?,
-    @ColumnInfo(name = "sleepDate") val sleepDate: Date,
+    @ColumnInfo(name = "sleepDate") val sleepDate: String?,
 )
