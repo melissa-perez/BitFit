@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BitFit</string>
+    <string name="averageHoursText">Average hours of sleep: 10.0 hours</string>
+    <string name="averageFeelingText">Average feeling: 9/10</string>
 </resources>

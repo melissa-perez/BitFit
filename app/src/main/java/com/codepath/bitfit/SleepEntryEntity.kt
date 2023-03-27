@@ -3,9 +3,12 @@ package com.codepath.bitfit
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import java.util.Date
 
 @Entity(tableName = "sleep_entry_table")
+@TypeConverters(Converters::class)
+
 data class SleepEntryEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "sleptHours") val sleptHours: Float,
