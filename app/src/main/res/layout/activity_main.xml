@@ -53,6 +53,17 @@
 
     </LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/sleep_record_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleep_dashboard_fl" />
+
     <Button
         android:id="@+id/sleep_record_btn"
         android:layout_width="wrap_content"
@@ -61,7 +72,7 @@
         android:backgroundTint="@color/tropical_indigo"
         android:font="@font/poppins"
         android:fontWeight="700"
-        android:text="Log sleep"
+        android:text="@string/sleepBtnText"
         android:textAlignment="center"
         android:textColor="@color/space_cadet"
         android:textSize="20sp"

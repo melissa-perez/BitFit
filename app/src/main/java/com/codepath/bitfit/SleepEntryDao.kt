@@ -11,7 +11,7 @@ interface SleepEntryDao {
     fun getAllSleepEntries(): Flow<List<SleepEntryEntity>>
 
     @Insert
-    fun insertSleepEntry(entry: SleepEntryEntity)
+    fun insert(entry: SleepEntryEntity)
 
     @Query("DELETE FROM sleep_entry_table")
     fun deleteAllSleepEntries()
