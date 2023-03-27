@@ -3,4 +3,11 @@
     <string name="averageHoursText">Average hours of sleep: 10.0 hours</string>
     <string name="averageFeelingText">Average feeling: 9/10</string>
     <string name="sleepBtnText">Log sleep</string>
+    <string name="sleptHoursText">How many hours did you sleep?</string>
+    <string name="sleptHoursCD">Slide to enter number of hours slept.</string>
+    <string name="feelingsText">How were you feeling when you woke up?</string>
+    <string name="feelingsCD">Slide to enter feeling rating.</string>
+    <string name="notesText">Any other notes?</string>
+    <string name="notesHintText">Ex. sleeping pill, noisy</string>
+    <string name="saveBtnText">Save</string>
 </resources>
