@@ -39,4 +39,13 @@ class SleepEntryFragment : Fragment(), OnListFragmentInteractionListener {
 
         return view
     }
+
+    private fun updateAdapter(recyclerView: RecyclerView) {
+
+        //val movieJsonArray: JSONArray? = json?.jsonObject?.getJSONArray("results")
+
+        //movieJsonArray?.let { NowPlayingMovie.fromJsonArray(it) }?.let { movies.addAll(it) }
+        adapter.notifyDataSetChanged()
+
+    }
 }
