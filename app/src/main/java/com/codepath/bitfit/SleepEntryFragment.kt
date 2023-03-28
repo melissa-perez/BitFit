@@ -40,28 +40,30 @@ class SleepEntryFragment : Fragment(), OnListFragmentInteractionListener {
         lifecycleScope.launch {
             (requireActivity().application as SleepEntryApplication).db.sleepEntryDao()
                 .getAllSleepEntries().collect { databaseList ->
-                databaseList.map { entity ->
-                    SleepEntryEntity(
-                        entity.id,
-                        entity.sleptHours,
-                        entity.feelingRating,
-                        entity.sleepNotes,
-                        entity.sleepDate
-                    )
-                }.also { mappedList ->
-                    val sleepEntries = mappedList.map { sleepEntryEntity ->
-                        SleepEntry(
-                            sleepEntryEntity.sleptHours,
-                            sleepEntryEntity.feelingRating,
-                            sleepEntryEntity.sleepDate,
-                            sleepEntryEntity.sleepNotes
+                    databaseList.map { entity ->
+                        SleepEntryEntity(
+                            entity.id,
+                            entity.sleptHours,
+                            entity.feelingRating,
+                            entity.sleepNotes,
+                            entity.sleepDate
                         )
+                    }.also { mappedList ->
+                        val sleepEntries = mappedList.map { sleepEntryEntity ->
+                            SleepEntry(
+                                sleepEntryEntity.sleptHours,
+                                sleepEntryEntity.feelingRating,
+                                sleepEntryEntity.sleepDate,
+                                sleepEntryEntity.sleepNotes
+                            )
+                        }
+                        entries.clear()
+                        entries.addAll(sleepEntries)
+                        adapter.notifyDataSetChanged()
                     }
-                    entries.clear()
-                    entries.addAll(sleepEntries)
-                    adapter.notifyDataSetChanged()
                 }
-            }
+
+
         }
         return view
     }

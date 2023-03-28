@@ -8,51 +8,6 @@
     android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/sleep_dashboard_fl"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/average_dashboard"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011">
-
-        <TextView
-            android:id="@+id/average_hours_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:font="@font/poppins"
-            android:fontWeight="500"
-            android:text="@string/averageHoursText"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/average_feelings_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:font="@font/poppins"
-            android:fontWeight="500"
-            android:text="@string/averageFeelingText"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/average_hours_tv" />
-
-    </LinearLayout>
-
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -62,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/sleep_record_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sleep_dashboard_fl" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/sleep_record_btn"

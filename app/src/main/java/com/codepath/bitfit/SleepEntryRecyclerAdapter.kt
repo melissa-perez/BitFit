@@ -17,6 +17,7 @@ class SleepEntryRecyclerAdapter(
     override fun getItemCount(): Int {
         return entries.size
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SleepEntryViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.fragment_sleep_entry, parent, false)

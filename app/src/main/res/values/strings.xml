@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BitFit</string>
-    <string name="averageHoursText">Average hours of sleep: 10.0 hours</string>
-    <string name="averageFeelingText">Average feeling: 9/10</string>
+    <string name="averageHoursText">Average hours of sleep:</string>
+    <string name="averageFeelingText">Average feeling:</string>
     <string name="sleepBtnText">Log sleep</string>
     <string name="sleptHoursText">How many hours did you sleep?</string>
     <string name="sleptHoursCD">Slide to enter number of hours slept.</string>

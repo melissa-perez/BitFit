@@ -16,9 +16,9 @@ interface SleepEntryDao {
     @Query("DELETE FROM sleep_entry_table")
     fun deleteAllSleepEntries()
 
-    @Query("SELECT AVG(feelingRating / 10) FROM sleep_entry_table")
-    fun getFeelingAverage() : Double
+    @Query("SELECT AVG(feelingRating) FROM sleep_entry_table")
+    fun getFeelingAverage(): Double
 
-    @Query("SELECT AVG(sleptHours / 24) FROM sleep_entry_table")
-    fun getHoursAverage() : Double
+    @Query("SELECT AVG(sleptHours) FROM sleep_entry_table")
+    fun getHoursAverage(): Double
 }

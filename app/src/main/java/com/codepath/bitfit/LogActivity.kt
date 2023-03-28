@@ -1,10 +1,8 @@
 package com.codepath.bitfit
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.codepath.bitfit.databinding.SleepLogActivityBinding
@@ -40,12 +38,6 @@ class LogActivity : AppCompatActivity() {
             val date = dateEditText.text.toString()
 
 
-            Log.d(
-                "LogActivity/",
-                "${hours}, ${feelings}," +
-                        " ${notes}, ${date}"
-            )
-
             let {
                 lifecycleScope.launch(IO) {
 
@@ -60,7 +52,6 @@ class LogActivity : AppCompatActivity() {
                 }
 
             }
-
 
             // reset data
             sleptHoursSlider.value = 0.0f

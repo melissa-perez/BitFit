@@ -12,9 +12,8 @@
         android:color="@color/thistle" />
 
     <gradient
-        android:startColor="@color/thistle"
-        android:endColor="@color/tropical_indigo"
         android:angle="45"
-        android:type="linear"
-        />
+        android:endColor="@color/tropical_indigo"
+        android:startColor="@color/thistle"
+        android:type="linear" />
 </shape>
