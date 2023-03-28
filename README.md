@@ -4,7 +4,7 @@ Submitted by: **Melissa Perez**
 
 **BitFit** is a health metrics app that allows users to track their sleep.
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
